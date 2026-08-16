@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ritesh Gupta | Digital Studio</title>
+<title>Ritesh Gupta | Digital Creator</title>
 
 <style>
-
-/* =========================
-   GLOBAL
-========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
+    font-family:Arial,sans-serif;
     scroll-behavior:smooth;
 }
 
@@ -27,689 +21,327 @@ body{
     overflow-x:hidden;
 }
 
-/* Animated background */
-
+/* BACKGROUND */
 body::before{
     content:"";
     position:fixed;
-    width:500px;
-    height:500px;
-    background:#006eff;
-    filter:blur(180px);
+    width:300px;
+    height:300px;
+    background:#00c6ff;
+    border-radius:50%;
+    filter:blur(130px);
     opacity:.18;
-    top:-200px;
-    left:-150px;
+    top:-100px;
+    left:-100px;
     z-index:-1;
 }
 
 body::after{
     content:"";
     position:fixed;
-    width:450px;
-    height:450px;
-    background:#8b00ff;
-    filter:blur(180px);
+    width:300px;
+    height:300px;
+    background:#7c3cff;
+    border-radius:50%;
+    filter:blur(130px);
     opacity:.15;
-    right:-150px;
-    bottom:-150px;
+    right:-100px;
+    bottom:-100px;
     z-index:-1;
 }
 
-
-/* =========================
-   NAVBAR
-========================= */
-
+/* NAVBAR */
 nav{
     position:fixed;
     top:0;
-    left:0;
     width:100%;
-    height:70px;
-
+    height:65px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-
-    padding:0 7%;
-
-    background:rgba(5,8,22,.72);
-    backdrop-filter:blur(18px);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
-
-    z-index:999;
+    padding:0 6%;
+    background:rgba(5,8,22,.8);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid #222b42;
+    z-index:1000;
 }
 
 .logo{
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
-    letter-spacing:1px;
     color:#00d9ff;
 }
 
-.logo span{
-    color:white;
-}
-
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-
 nav a{
+    color:white;
     text-decoration:none;
-    color:#dce7ff;
-    font-size:14px;
-    transition:.3s;
+    margin-left:16px;
+    font-size:13px;
 }
 
 nav a:hover{
     color:#00d9ff;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
+/* HERO */
 .hero{
     min-height:100vh;
-
     display:flex;
-    align-items:center;
     justify-content:center;
-
+    align-items:center;
     text-align:center;
-
-    padding:120px 20px 70px;
-
+    padding:100px 20px 50px;
     position:relative;
-
-    perspective:1200px;
 }
 
-.hero-content{
-    max-width:900px;
-
-    animation:heroIn 1.2s ease;
+.hero-box{
+    max-width:850px;
 }
 
-@keyframes heroIn{
-    from{
-        opacity:0;
-        transform:translateY(40px) rotateX(10deg);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0) rotateX(0);
-    }
+.profile{
+    width:150px;
+    height:150px;
+    margin:0 auto 25px;
+    border-radius:50%;
+    padding:5px;
+    background:linear-gradient(135deg,#00d9ff,#7c3cff);
+    box-shadow:0 0 45px rgba(0,217,255,.3);
 }
 
-.badge{
-    display:inline-block;
+.profile img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:50%;
+    background:#111827;
+}
 
-    padding:9px 18px;
-
-    border:1px solid rgba(0,217,255,.35);
-    border-radius:50px;
-
-    background:rgba(0,217,255,.08);
-
+/* If photo isn't added */
+.profile-text{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    background:#111827;
+    font-size:35px;
+    font-weight:bold;
     color:#00d9ff;
-
-    font-size:13px;
-
-    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:clamp(42px,8vw,82px);
+    font-size:clamp(42px,8vw,75px);
     line-height:1.05;
-    margin-bottom:25px;
-
-    text-shadow:
-        0 0 30px rgba(0,217,255,.15);
+    margin-bottom:20px;
 }
 
-.gradient{
-    background:linear-gradient(
-        90deg,
-        #00d9ff,
-        #7c5cff,
-        #00d9ff
-    );
-
-    background-size:200% auto;
-
-    -webkit-background-clip:text;
-    color:transparent;
-
-    animation:gradientMove 4s linear infinite;
-}
-
-@keyframes gradientMove{
-    to{
-        background-position:200% center;
-    }
+.hero h1 span{
+    color:#00d9ff;
 }
 
 .hero p{
     color:#aebbd4;
-    font-size:18px;
     line-height:1.7;
+    font-size:17px;
     max-width:650px;
     margin:auto;
 }
 
 .buttons{
-    margin-top:35px;
-
-    display:flex;
-    justify-content:center;
-    gap:15px;
-
-    flex-wrap:wrap;
+    margin-top:30px;
 }
 
 .btn{
     display:inline-block;
-
-    padding:15px 28px;
-
-    border-radius:50px;
-
+    padding:14px 25px;
+    margin:5px;
+    border-radius:30px;
     text-decoration:none;
-
     font-weight:bold;
-
-    transition:.35s;
-
-    position:relative;
-    overflow:hidden;
+    transition:.3s;
 }
 
 .primary{
-    background:linear-gradient(
-        135deg,
-        #00c6ff,
-        #006eff
-    );
-
+    background:linear-gradient(135deg,#00c6ff,#006eff);
     color:white;
-
-    box-shadow:
-        0 10px 30px rgba(0,110,255,.25);
 }
 
 .secondary{
-    border:1px solid rgba(255,255,255,.15);
-    background:rgba(255,255,255,.05);
+    border:1px solid #34405c;
     color:white;
+    background:#10182b;
 }
 
 .btn:hover{
-    transform:translateY(-5px) scale(1.03);
+    transform:translateY(-5px);
 }
 
-
-/* =========================
-   FLOATING 3D OBJECTS
-========================= */
-
-.orb{
-    position:absolute;
-    border-radius:50%;
-
-    filter:blur(1px);
-
-    animation:float 6s ease-in-out infinite;
-}
-
-.orb1{
-    width:90px;
-    height:90px;
-
-    background:linear-gradient(
-        135deg,
-        #00d9ff,
-        #006eff
-    );
-
-    top:25%;
-    left:8%;
-
-    box-shadow:
-        0 0 60px rgba(0,217,255,.5);
-}
-
-.orb2{
-    width:55px;
-    height:55px;
-
-    background:#8b5cff;
-
-    right:12%;
-    top:30%;
-
-    box-shadow:
-        0 0 50px rgba(139,92,255,.6);
-
-    animation-delay:2s;
-}
-
-.orb3{
-    width:70px;
-    height:70px;
-
-    border:2px solid #00d9ff;
-
-    right:20%;
-    bottom:20%;
-
-    animation-delay:1s;
-}
-
-@keyframes float{
-
-    0%,100%{
-        transform:translateY(0) rotate(0);
-    }
-
-    50%{
-        transform:translateY(-30px) rotate(180deg);
-    }
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
+/* SECTION */
 section{
-    padding:100px 7%;
-    max-width:1200px;
+    max-width:1150px;
     margin:auto;
+    padding:90px 6%;
 }
 
-.section-title{
+.title{
     text-align:center;
-    margin-bottom:60px;
+    margin-bottom:45px;
 }
 
-.section-title h2{
-    font-size:42px;
-    margin-bottom:12px;
+.title h2{
+    font-size:38px;
 }
 
-.section-title span{
+.title span{
     color:#00d9ff;
 }
 
-.section-title p{
-    color:#8997b2;
+.title p{
+    color:#8794ad;
+    margin-top:10px;
 }
 
-
-/* =========================
-   3D CARDS
-========================= */
-
+/* CARDS */
 .cards{
     display:grid;
-
-    grid-template-columns:
-        repeat(auto-fit,minmax(230px,1fr));
-
-    gap:25px;
-
-    perspective:1200px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
 }
 
 .card{
-    position:relative;
-
-    padding:35px 28px;
-
-    min-height:240px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.09),
-            rgba(255,255,255,.025)
-        );
-
-    border:1px solid rgba(255,255,255,.1);
-
-    border-radius:24px;
-
-    backdrop-filter:blur(15px);
-
-    transition:
-        transform .4s,
-        border .4s,
-        box-shadow .4s;
-
-    transform-style:preserve-3d;
-}
-
-.card:hover{
-    transform:
-        translateY(-12px)
-        rotateX(6deg)
-        rotateY(-6deg);
-
-    border-color:#00d9ff;
-
-    box-shadow:
-        0 25px 60px rgba(0,0,0,.35),
-        0 0 30px rgba(0,217,255,.08);
-}
-
-.card::before{
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    border-radius:24px;
-
-    background:
-        linear-gradient(
-            120deg,
-            transparent,
-            rgba(255,255,255,.08),
-            transparent
-        );
-
-    opacity:0;
-
+    padding:28px;
+    min-height:210px;
+    border-radius:22px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.08),
+        rgba(255,255,255,.025)
+    );
+    border:1px solid #26334d;
+    backdrop-filter:blur(12px);
     transition:.4s;
 }
 
-.card:hover::before{
-    opacity:1;
+.card:hover{
+    transform:translateY(-10px) rotateX(4deg);
+    border-color:#00d9ff;
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
 }
 
 .icon{
-    font-size:45px;
-    margin-bottom:20px;
-
-    transform:translateZ(30px);
+    font-size:40px;
+    margin-bottom:18px;
 }
 
 .card h3{
-    font-size:21px;
     margin-bottom:12px;
 }
 
 .card p{
     color:#9aa8c2;
-    line-height:1.7;
+    line-height:1.6;
 }
 
-
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
 
 .about-box{
-    display:grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:30px;
-
-    align-items:center;
+    padding:35px;
+    border-radius:22px;
+    background:#10182b;
+    border:1px solid #26334d;
 }
 
-.about-text{
-    background:rgba(255,255,255,.04);
-
-    padding:40px;
-
-    border-radius:25px;
-
-    border:1px solid rgba(255,255,255,.08);
+.about-box h3{
+    font-size:28px;
+    margin-bottom:15px;
 }
 
-.about-text h3{
-    font-size:30px;
-    margin-bottom:18px;
-}
-
-.about-text p{
-    color:#9aa8c2;
+.about-box p{
+    color:#aab7cc;
     line-height:1.8;
 }
 
-.profile-card{
-    min-height:300px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:30px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #113f64,
-            #080d1c
-        );
-
-    border:1px solid rgba(0,217,255,.2);
-
-    box-shadow:
-        inset 0 0 50px rgba(0,217,255,.05);
-}
-
-.profile-circle{
-    width:170px;
-    height:170px;
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    font-size:45px;
-    font-weight:bold;
-
-    color:white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00c6ff,
-            #7c3cff
-        );
-
-    box-shadow:
-        0 0 60px rgba(0,198,255,.3);
-}
-
-
-/* =========================
-   PROJECTS
-========================= */
-
-.project-card{
-    min-height:220px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
-
-    overflow:hidden;
-}
-
-.project-number{
-    font-size:13px;
-    color:#00d9ff;
-
-    margin-bottom:12px;
-}
-
-
-/* =========================
-   CONTACT
-========================= */
-
-.contact-box{
-    max-width:700px;
-
+/* CONTACT */
+.contact{
+    max-width:650px;
     margin:auto;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,.07),
-            rgba(255,255,255,.025)
-        );
-
-    padding:40px;
-
-    border-radius:28px;
-
-    border:1px solid rgba(255,255,255,.1);
+    padding:35px;
+    background:#10182b;
+    border:1px solid #26334d;
+    border-radius:22px;
 }
 
-.contact-info{
+.contact p{
     text-align:center;
-    margin-bottom:30px;
+    color:#aab7cc;
+    margin:10px;
 }
 
-.contact-info p{
-    color:#aebbd4;
-    margin:10px 0;
-}
-
-.contact-info a{
+.contact a{
     color:#00d9ff;
     text-decoration:none;
 }
 
-input,
-textarea{
-
+input,textarea{
     width:100%;
-
-    padding:16px;
-
-    margin-bottom:15px;
-
-    border-radius:12px;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    background:#0b1222;
-
+    padding:15px;
+    margin-top:15px;
+    background:#080e1d;
     color:white;
-
+    border:1px solid #293651;
+    border-radius:10px;
     outline:none;
-
-    font-size:15px;
-}
-
-input:focus,
-textarea:focus{
-    border-color:#00d9ff;
 }
 
 textarea{
-    min-height:130px;
-    resize:vertical;
+    height:120px;
+    resize:none;
 }
 
 button{
     width:100%;
-
-    padding:16px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #00c6ff,
-            #006eff
-        );
-
+    margin-top:15px;
+    padding:15px;
+    border:0;
+    border-radius:30px;
+    background:linear-gradient(135deg,#00c6ff,#006eff);
     color:white;
-
     font-size:16px;
-
     font-weight:bold;
-
-    cursor:pointer;
-
-    transition:.3s;
 }
 
-button:hover{
-    transform:translateY(-3px);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
+/* FOOTER */
 footer{
-
     text-align:center;
-
-    padding:35px 20px;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
+    padding:30px 20px;
     background:#03050c;
-
-    color:#71809b;
+    color:#738099;
 }
 
-footer strong{
+footer span{
     color:#00d9ff;
 }
 
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:700px){
+/* MOBILE */
+@media(max-width:650px){
 
     nav{
-        padding:0 18px;
-    }
-
-    nav ul{
-        gap:10px;
+        padding:0 12px;
     }
 
     nav a{
-        font-size:11px;
+        margin-left:6px;
+        font-size:10px;
     }
 
     .logo{
-        font-size:16px;
-    }
-
-    section{
-        padding:80px 18px;
-    }
-
-    .hero{
-        min-height:100vh;
+        font-size:15px;
     }
 
     .hero h1{
@@ -720,139 +352,81 @@ footer strong{
         font-size:15px;
     }
 
-    .about-box{
+    section{
+        padding:70px 18px;
+    }
+
+    .about{
         grid-template-columns:1fr;
     }
 
-    .section-title h2{
+    .title h2{
         font-size:32px;
     }
-
-    .orb1{
-        left:-30px;
-    }
-
-    .orb2{
-        right:-20px;
-    }
-
 }
-
-
-/* =========================
-   SCROLL ANIMATION
-========================= */
-
-.reveal{
-    opacity:0;
-    transform:translateY(40px);
-
-    transition:
-        opacity .8s,
-        transform .8s;
-}
-
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
-}
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     NAVBAR
-========================= -->
-
+<!-- NAVBAR -->
 <nav>
+    <div class="logo">RITESH HUB</div>
 
-    <div class="logo">
-        RITESH <span>HUB</span>
+    <div>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
     </div>
-
-    <ul>
-
-        <li>
-            <a href="#home">Home</a>
-        </li>
-
-        <li>
-            <a href="#services">Services</a>
-        </li>
-
-        <li>
-            <a href="#projects">Projects</a>
-        </li>
-
-        <li>
-            <a href="#about">About</a>
-        </li>
-
-        <li>
-            <a href="#contact">Contact</a>
-        </li>
-
-    </ul>
-
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
-
+<!-- HOME -->
 <section class="hero" id="home">
 
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
+    <div class="hero-box">
 
-    <div class="hero-content">
+        <!-- PHOTO -->
+        <div class="profile">
 
-        <div class="badge">
-            ✦ DIGITAL CREATOR • DESIGN • TECHNOLOGY
+            <!--
+            PHOTO LAGANE KE LIYE:
+            profile.jpg naam ki photo isi folder me rakho
+            aur neeche wali img line ko use karo.
+            -->
+
+            <img src="profile.jpg"
+                 alt="Ritesh Gupta"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+
+            <div class="profile-text">
+                RG
+            </div>
+
         </div>
 
         <h1>
-
-            Hello, I'm
-
+            Hi, I'm
             <br>
-
-            <span class="gradient">
-                Ritesh Gupta
-            </span>
-
+            <span>Ritesh Gupta</span>
         </h1>
 
         <p>
-
-            Welcome to my digital space.
-            I create modern digital experiences,
-            explore technology and build creative projects
-            using design, web development and AI.
-
+            Digital Creator • Designer • Technology Learner
+            <br>
+            I create digital experiences and explore
+            Web Development, Python, Design and AI.
         </p>
-
 
         <div class="buttons">
 
-            <a
-                class="btn primary"
-                href="#projects"
-            >
+            <a class="btn primary" href="#projects">
                 Explore My Work →
             </a>
 
-            <a
-                class="btn secondary"
-                href="#contact"
-            >
+            <a class="btn secondary" href="#contact">
                 Contact Me
             </a>
 
@@ -863,305 +437,171 @@ footer strong{
 </section>
 
 
+<!-- SERVICES -->
+<section id="services">
 
-<!-- =========================
-     SERVICES
-========================= -->
-
-<section id="services" class="reveal">
-
-    <div class="section-title">
-
-        <h2>
-            My <span>Services</span>
-        </h2>
-
-        <p>
-            Creative technology and digital solutions
-        </p>
-
+    <div class="title">
+        <h2>My <span>Services</span></h2>
+        <p>Things I love creating and learning</p>
     </div>
-
 
     <div class="cards">
 
-
         <div class="card">
-
-            <div class="icon">
-                💻
-            </div>
-
-            <h3>
-                Web Development
-            </h3>
-
+            <div class="icon">💻</div>
+            <h3>Web Development</h3>
             <p>
                 Modern responsive websites with
-                beautiful interfaces and smooth
-                user experiences.
+                attractive user interfaces.
             </p>
-
         </div>
 
-
-
         <div class="card">
-
-            <div class="icon">
-                🎨
-            </div>
-
-            <h3>
-                Graphic Design
-            </h3>
-
+            <div class="icon">🎨</div>
+            <h3>Graphic Design</h3>
             <p>
-                Creative digital designs,
-                posters, banners and visual
-                content.
+                Creative posters, banners and
+                digital graphics.
             </p>
-
         </div>
 
-
-
         <div class="card">
-
-            <div class="icon">
-                🤖
-            </div>
-
-            <h3>
-                AI Projects
-            </h3>
-
+            <div class="icon">🤖</div>
+            <h3>AI Projects</h3>
             <p>
-                Exploring artificial intelligence
-                and building useful digital
-                experiments.
+                Exploring AI tools and creating
+                useful digital experiments.
             </p>
-
         </div>
 
-
-
         <div class="card">
-
-            <div class="icon">
-                📱
-            </div>
-
-            <h3>
-                Mobile Solutions
-            </h3>
-
+            <div class="icon">📱</div>
+            <h3>Mobile Design</h3>
             <p>
-                Mobile-friendly digital experiences
-                designed for modern smartphones.
+                Mobile-friendly websites designed
+                for smartphones.
             </p>
-
         </div>
 
     </div>
-
 </section>
 
 
+<!-- PROJECTS -->
+<section id="projects">
 
-<!-- =========================
-     PROJECTS
-========================= -->
-
-<section id="projects" class="reveal">
-
-    <div class="section-title">
-
-        <h2>
-            Featured <span>Projects</span>
-        </h2>
-
-        <p>
-            Some things I'm learning and building
-        </p>
-
+    <div class="title">
+        <h2>My <span>Projects</span></h2>
+        <p>My learning and creative journey</p>
     </div>
-
 
     <div class="cards">
 
-
-        <div class="card project-card">
-
-            <div class="project-number">
-                PROJECT 01
-            </div>
-
-            <div class="icon">
-                🌐
-            </div>
-
-            <h3>
-                Ritesh Digital Hub
-            </h3>
-
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Ritesh Digital Hub</h3>
             <p>
-                My first personal website built
-                with HTML, CSS and JavaScript.
+                My personal website created with
+                HTML and CSS.
             </p>
-
         </div>
 
-
-
-        <div class="card project-card">
-
-            <div class="project-number">
-                PROJECT 02
-            </div>
-
-            <div class="icon">
-                🐍
-            </div>
-
-            <h3>
-                Python Projects
-            </h3>
-
+        <div class="card">
+            <div class="icon">🐍</div>
+            <h3>Python Projects</h3>
             <p>
-                Small applications and experiments
-                created while learning Python.
+                Small Python applications created
+                while learning programming.
             </p>
-
         </div>
 
-
-
-        <div class="card project-card">
-
-            <div class="project-number">
-                PROJECT 03
-            </div>
-
-            <div class="icon">
-                🎨
-            </div>
-
-            <h3>
-                Creative Designs
-            </h3>
-
+        <div class="card">
+            <div class="icon">✨</div>
+            <h3>Creative Projects</h3>
             <p>
-                Digital design experiments,
-                graphics and creative concepts.
+                Digital design and technology
+                experiments.
             </p>
-
         </div>
 
     </div>
-
 </section>
 
 
+<!-- ABOUT -->
+<section id="about">
 
-<!-- =========================
-     ABOUT
-========================= -->
-
-<section id="about" class="reveal">
-
-    <div class="section-title">
-
-        <h2>
-            About <span>Me</span>
-        </h2>
-
+    <div class="title">
+        <h2>About <span>Me</span></h2>
     </div>
 
+    <div class="about">
 
-    <div class="about-box">
+        <div class="about-box">
 
-
-        <div class="about-text">
-
-            <h3>
-                Ritesh Gupta
-            </h3>
+            <h3>Ritesh Gupta</h3>
 
             <p>
-
-                I'm a digital creator and technology
-                learner based in Surat, Gujarat.
-
+                I'm a technology learner and digital
+                creator based in Surat, Gujarat.
                 <br><br>
-
-                I am learning web development,
-                Python, design and modern AI tools.
+                I'm learning Web Development,
+                Python, Graphic Design and modern
+                AI tools.
+                <br><br>
                 This website represents my journey
-                of learning technology and creating
-                new digital projects.
-
+                of learning and creating.
             </p>
 
         </div>
 
+        <div class="about-box">
 
-        <div class="profile-card">
-
-            <div class="profile-circle">
-                RG
-            </div>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact" class="reveal">
-
-    <div class="section-title">
-
-        <h2>
-            Let's <span>Connect</span>
-        </h2>
-
-        <p>
-            Have an idea? Let's talk.
-        </p>
-
-    </div>
-
-
-    <div class="contact-box">
-
-
-        <div class="contact-info">
+            <h3>My Details</h3>
 
             <p>
                 📍 Surat, Gujarat, India
-            </p>
-
-            <p>
-                📱 +91 257393
-            </p>
-
-            <p>
-                📧
-                <a href="mailto:riteshgu21@gmail.com">
-                    riteshgu21@gmail.com
-                </a>
+                <br><br>
+                💻 Digital Creator
+                <br><br>
+                🎨 Designer
+                <br><br>
+                🐍 Python Learner
+                <br><br>
+                🤖 AI Explorer
             </p>
 
         </div>
 
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="title">
+        <h2>Let's <span>Connect</span></h2>
+        <p>Have an idea? Send me a message.</p>
+    </div>
+
+    <div class="contact">
+
+        <p>
+            📍 Surat, Gujarat, India
+        </p>
+
+        <p>
+            📧
+            <a href="mailto:riteshgu21@gmail.com">
+                riteshgu21@gmail.com
+            </a>
+        </p>
+
+        <p>
+            📱 +91 257393
+        </p>
 
         <form onsubmit="sendMessage(event)">
 
@@ -1191,42 +631,25 @@ footer strong{
 
         </form>
 
-
     </div>
 
 </section>
 
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- FOOTER -->
 <footer>
 
     © 2026
-    <strong>
-        Ritesh Gupta
-    </strong>
+    <span>Ritesh Gupta</span>
 
     <br><br>
 
     Surat, Gujarat • India
 
-    <br><br>
-
-    Designed & Built with
-    HTML • CSS • JavaScript
-
 </footer>
 
 
-
 <script>
-
-/* =========================
-   CONTACT FORM
-========================= */
 
 function sendMessage(event){
 
@@ -1240,105 +663,9 @@ function sendMessage(event){
         name +
         "! Your message has been received."
     );
-
 }
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const reveals =
-    document.querySelectorAll(".reveal");
-
-
-function revealOnScroll(){
-
-    reveals.forEach(element => {
-
-        const windowHeight =
-            window.innerHeight;
-
-        const elementTop =
-            element.getBoundingClientRect().top;
-
-        if(elementTop < windowHeight - 80){
-
-            element.classList.add("show");
-
-        }
-
-    });
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    revealOnScroll
-);
-
-revealOnScroll();
-
-
-/* =========================
-   3D CARD TOUCH/MOUSE EFFECT
-========================= */
-
-const cards =
-    document.querySelectorAll(".card");
-
-
-cards.forEach(card => {
-
-    card.addEventListener(
-        "mousemove",
-        function(event){
-
-            const rect =
-                card.getBoundingClientRect();
-
-            const x =
-                event.clientX - rect.left;
-
-            const y =
-                event.clientY - rect.top;
-
-            const centerX =
-                rect.width / 2;
-
-            const centerY =
-                rect.height / 2;
-
-            const rotateX =
-                (y - centerY) / 18;
-
-            const rotateY =
-                (centerX - x) / 18;
-
-            card.style.transform =
-                `translateY(-10px)
-                 rotateX(${rotateX}deg)
-                 rotateY(${rotateY}deg)`;
-
-        }
-    );
-
-
-    card.addEventListener(
-        "mouseleave",
-        function(){
-
-            card.style.transform =
-                "";
-
-        }
-    );
-
-});
 
 </script>
 
-
 </body>
-    </html>
+</html>
